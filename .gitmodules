@@ -4,3 +4,7 @@
 [submodule "meshtestic"]
 	path = meshtestic
 	url = https://github.com/meshtastic/meshTestic
+[submodule "lib/Adafruit_nRFCrypto_meshtastic"]
+	path = lib/Adafruit_nRFCrypto_meshtastic
+	url = git@github.com:Meshlink-Team/Adafruit_nRFCrypto_meshtastic.git
+	branch = sha256
