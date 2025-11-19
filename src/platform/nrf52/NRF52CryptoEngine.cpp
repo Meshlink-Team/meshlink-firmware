@@ -27,6 +27,15 @@ class NRF52CryptoEngine : public CryptoEngine
             memcpy(bytes, encBuf, numBytes);
         }
     }
+    virtual void hash(uint8_t *bytes, size_t numBytes) override {
+        //nRFCrypto.begin();
+        nRFCrypto_Hash hash;
+        hash.singleOperation(CRYS_HASH_SHA256_mode, bytes, numBytes, bytes);
+        // hash.begin(CRYS_HASH_SHA256_mode);
+        // hash.update(bytes, numBytes);
+        // hash.end(bytes);
+        //nRFCrypto.end();
+    }
 };
 
 CryptoEngine *crypto = new NRF52CryptoEngine();
